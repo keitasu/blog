@@ -617,6 +617,15 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+
+code[class*="language-"],
+pre[class*="language-"] {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;

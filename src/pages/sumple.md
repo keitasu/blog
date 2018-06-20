@@ -1,9 +1,56 @@
 ---
-title: Pandas and Bananas
-date: "2017-08-21"
+title: markdown sumple
+date: "2018-06-20"
 ---
 
-Do Pandas eat bananas? Check out this short video that shows that yes! pandas do
-seem to really enjoy bananas!
+JavaScript Syntax Highlight test  
+現状font sizeが微妙かも
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4SZl1r2O_bY" frameborder="0" allowfullscreen></iframe>
+```javascript
+import React from 'react'
+import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
+
+import Header from '../components/header'
+import './index.css'
+import "prismjs/themes/prism-tomorrow.css"
+
+const Layout = ({ children, data }) => (
+  <div>
+    <Helmet
+      title={data.site.siteMetadata.title}
+      meta={[
+        { name: 'description', content: 'Sample' },
+        { name: 'keywords', content: 'sample, something' },
+      ]}
+    />
+    <Header siteTitle={data.site.siteMetadata.title} />
+    <div
+      style={{
+        margin: '0 auto',
+        maxWidth: 960,
+        padding: '0px 1.0875rem 1.45rem',
+        paddingTop: 0,
+      }}
+    >
+      {children()}
+    </div>
+  </div>
+)
+
+Layout.propTypes = {
+  children: PropTypes.func,
+}
+
+export default Layout
+
+export const query = graphql`
+  query SiteTitleQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
+```
