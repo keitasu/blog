@@ -6,6 +6,7 @@
 
  // You can delete this file if you're not using it
 const path = require('path')
+const _ = require('lodash')
 const { createFilePath } = require('gatsby-source-filesystem')
 
 exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
@@ -22,6 +23,10 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
+
+  const blogPostTemplate = path.resolve("src/templates/blog-post.js");
+  const tagTemplate = path.resolve("src/templates/tags.js");
+
   return new Promise((resolve, reject) => {
     graphql(`
       {
@@ -31,19 +36,42 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               fields {
                 slug
               }
+              frontmatter {
+                tags
+              }
             }
           }
         }
       }
     `
 ).then(result => {
-      result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      if (result.errors) { reject(result.errors) }
+
+      const posts = result.data.allMarkdownRemark.edges
+      posts.forEach(({ node }) => {
         createPage({
           path: node.fields.slug,
-          component: path.resolve(`./src/templates/blog-post.js`),
+          component: blogPostTemplate,
           context: {
             slug: node.fields.slug,
           },
+        })
+      })
+
+      let tags = []
+      _.each(posts, edge => {
+        if (_.get(edge, 'node.frontmatter.tags')) {
+          tags.concat(edge.node.frontmatter.tags)
+        }
+      })
+
+      tags.forEach(tag => {
+        createPage({
+          path: `/tags/${_.kebabCase(tag)}/`,
+          component: tagTemplate,
+          context: {
+            tag,
+          }
         })
       })
       resolve()

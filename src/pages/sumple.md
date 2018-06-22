@@ -1,12 +1,11 @@
 ---
-title: markdown sumple
+title: markdown sample
 date: "2018-06-20"
+tags: ['sample', 'javascript']
 ---
 
 JavaScript Syntax Highlight test  
-現状font sizeが微妙かも  
-build test
-webhook test
+現状font sizeが微妙かも
 
 ```javascript
 import React from 'react'
