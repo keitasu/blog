@@ -24,11 +24,6 @@ export default ({ data }) => {
   )
 }
 
-const H1 = styled.h1`
-  display: inline-block;
-  border-bottom: 1px solid;
-`
-
 const H3 = styled.h3`
   margin-bottom: 20px;
 `

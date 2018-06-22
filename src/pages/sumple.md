@@ -4,7 +4,8 @@ date: "2018-06-20"
 ---
 
 JavaScript Syntax Highlight test  
-現状font sizeが微妙かも
+現状font sizeが微妙かも  
+build test
 
 ```javascript
 import React from 'react'
