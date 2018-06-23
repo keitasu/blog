@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
+import _ from 'lodash'
 
 export default ({ data }) => {
   return (
@@ -9,7 +10,7 @@ export default ({ data }) => {
       { data.allMarkdownRemark.edges.map(({ node }) => (
         <div key={ node.id }>
           <Link
-            to={ node.fields.slug }
+            to={ `/entry${ node.fields.slug }` }
             css={{ textDecoration: `none`, color: `inherit` }}
           >
           <H3>
@@ -17,7 +18,16 @@ export default ({ data }) => {
             <Span>— { node.frontmatter.date }</Span>
           </H3>
           <p>{ node.excerpt }</p>
-        </Link>
+          </Link>
+          <div>
+            { node.frontmatter.tags.map(tag => (
+              <Link
+                to={ `/tags/${ _.kebabCase(tag) }`}
+              >
+                <span>{ tag }</span>
+              </Link>
+            ))}
+          </div>
         </div>
       ))}
     </div>
@@ -41,6 +51,7 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
+            tags
           }
           fields {
             slug

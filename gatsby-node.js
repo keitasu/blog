@@ -50,7 +50,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       const posts = result.data.allMarkdownRemark.edges
       posts.forEach(({ node }) => {
         createPage({
-          path: node.fields.slug,
+          path: `/entry${ node.fields.slug }`,
           component: blogPostTemplate,
           context: {
             slug: node.fields.slug,
