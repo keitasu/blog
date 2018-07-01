@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "suke-blog",
+  "description": "",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "suke",
   "dependencies": {
     "babel-plugin-styled-components": "^1.5.1",
     "gatsby": "^1.9.247",

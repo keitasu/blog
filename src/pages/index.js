@@ -21,9 +21,7 @@ export default ({ data }) => {
           </Link>
           <div>
             { node.frontmatter.tags.map(tag => (
-              <Link
-                to={ `/tags/${ _.kebabCase(tag) }`}
-              >
+              <Link to={ `/tags/${ _.kebabCase(tag) }`}>
                 <span>{ tag }</span>
               </Link>
             ))}
