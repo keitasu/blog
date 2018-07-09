@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import gatsbyLink from 'gatsby-link'
 import styled from 'styled-components'
 
@@ -21,7 +21,7 @@ const Container = styled.div`
 
 const Wrapper = styled.div`
   margin: 0 auto;
-  max-width: 960;
+  max-width: 960px;
   padding: 1.45rem 1.0875rem;
 `
 

@@ -1,9 +1,9 @@
-import React from 'react'
+import * as React from 'react'
 
 export default () => {
   return (
     <div>
-      <h1>Hello JavaScript</h1>
+      <h1>JavaScript</h1>
     </div>
   )
 }
