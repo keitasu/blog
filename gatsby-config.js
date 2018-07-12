@@ -45,16 +45,5 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: "gatsby-plugin-typescript",
-      options: {
-        transpileOnly: true, // default
-        compilerOptions: {
-          target: `esnext`,
-          experimentalDecorators: true,
-          jsx: `react`,
-        }, // default
-      },
-    },
   ],
 }

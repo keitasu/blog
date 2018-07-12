@@ -4,20 +4,17 @@
   "version": "1.0.0",
   "author": "suke",
   "dependencies": {
-    "@types/lodash": "^4.14.110",
     "babel-plugin-styled-components": "^1.5.1",
     "gatsby": "^1.9.247",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-react-helmet": "^2.0.10",
     "gatsby-plugin-styled-components": "^2.0.11",
-    "gatsby-plugin-typescript": "^1.4.20",
     "gatsby-remark-prismjs": "^2.0.4",
     "gatsby-source-filesystem": "^1.5.39",
     "gatsby-transformer-remark": "^1.7.44",
     "prismjs": "^1.15.0",
     "react-helmet": "^5.2.0",
-    "styled-components": "^3.3.2",
-    "typescript": "^2.9.2"
+    "styled-components": "^3.3.2"
   },
   "keywords": [
     "gatsby"
@@ -30,7 +27,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "prettier": "^1.12.0"
   },
   "repository": {

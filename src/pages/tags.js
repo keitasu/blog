@@ -1,8 +1,8 @@
-import * as React from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
 // Utilities
-import * as _ from "lodash";
+import kebabCase from "lodash/kebabCase";
 
 // Components
 import Helmet from "react-helmet";
@@ -23,7 +23,7 @@ const TagsPage = ({
       <ul>
         {group.map(tag => (
           <li key={tag.fieldValue}>
-            <Link to={`/tags/${_.kebabCase(tag.fieldValue)}/`}>
+            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
               {tag.fieldValue} ({tag.totalCount})
             </Link>
           </li>
@@ -33,6 +33,23 @@ const TagsPage = ({
   </div>
 );
 
+TagsPage.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      group: PropTypes.arrayOf(
+        PropTypes.shape({
+          fieldValue: PropTypes.string.isRequired,
+          totalCount: PropTypes.number.isRequired,
+        }).isRequired
+      ),
+    }),
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+      }),
+    }),
+  }),
+};
 
 export default TagsPage;
 

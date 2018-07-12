@@ -1,7 +1,7 @@
-import * as React from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import gatsbyLink from 'gatsby-link'
-import * as _ from 'lodash'
+import Link from 'gatsby-link'
+import _ from 'lodash'
 
 export default ({ data }) => {
   return (
@@ -11,6 +11,7 @@ export default ({ data }) => {
         <div key={ node.id }>
           <Link
             to={ `/entry${ node.fields.slug }` }
+            css={{ textDecoration: `none`, color: `inherit` }}
           >
           <H3>
             { node.frontmatter.title }{' '}
@@ -19,8 +20,8 @@ export default ({ data }) => {
           <p>{ node.excerpt }</p>
           </Link>
           <div>
-            { node.frontmatter.tags.map((tag, index)=> (
-              <Link key={ index } to={ `/tags/${ _.kebabCase(tag) }`}>
+            { node.frontmatter.tags.map(tag => (
+              <Link to={ `/tags/${ _.kebabCase(tag) }`}>
                 <span>{ tag }</span>
               </Link>
             ))}
@@ -38,12 +39,6 @@ const H3 = styled.h3`
 const Span = styled.span`
   color: #bbb;
 `
-
-const Link = styled(gatsbyLink)`
-  text-decoration: none;
-  color: inherit;
-`
-
 export const query = graphql`
   query IndexQuery {
     allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {

@@ -8,7 +8,7 @@ JavaScript Syntax Highlight test
 現状font sizeが微妙かも
 
 ```javascript
-import * as React from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
