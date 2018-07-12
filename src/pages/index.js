@@ -6,24 +6,20 @@ import _ from 'lodash'
 export default ({ data }) => {
   return (
     <div>
-      <h4>{ data.allMarkdownRemark.totalCount}  posts</h4>
-      { data.allMarkdownRemark.edges.map(({ node }) => (
-        <div key={ node.id }>
-          <Link
-            to={ `/entry${ node.fields.slug }` }
-            css={{ textDecoration: `none`, color: `inherit` }}
-          >
-          <H3>
-            { node.frontmatter.title }{' '}
-            <Span>— { node.frontmatter.date }</Span>
-          </H3>
-          <p>{ node.excerpt }</p>
-          </Link>
+      <h4>{data.allMarkdownRemark.totalCount} posts</h4>
+      {data.allMarkdownRemark.edges.map(({ node }) => (
+        <div key={node.id}>
+          <ExtendLink to={`/entry${node.fields.slug}`}>
+            <H3>
+              {node.frontmatter.title} <Span>— {node.frontmatter.date}</Span>
+            </H3>
+            <p>{node.excerpt}</p>
+          </ExtendLink>
           <div>
-            { node.frontmatter.tags.map(tag => (
-              <Link to={ `/tags/${ _.kebabCase(tag) }`}>
-                <span>{ tag }</span>
-              </Link>
+            {node.frontmatter.tags.map(tag => (
+              <ExtendLink key={tag} to={`/tags/${_.kebabCase(tag)}`}>
+                <span>{tag}</span>
+              </ExtendLink>
             ))}
           </div>
         </div>
@@ -39,9 +35,15 @@ const H3 = styled.h3`
 const Span = styled.span`
   color: #bbb;
 `
+
+const ExtendLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+`
+
 export const query = graphql`
   query IndexQuery {
-    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       totalCount
       edges {
         node {

@@ -6,22 +6,20 @@ const Header = ({ siteTitle }) => (
   <Container>
     <Wrapper>
       <H1>
-        <Link to="/">
-          {siteTitle}
-        </Link>
+        <Link to="/">{siteTitle}</Link>
       </H1>
     </Wrapper>
   </Container>
 )
 
 const Container = styled.div`
-  background: rebeccapurple;
+  background: #2ac1f4;
   margin-bottom: 1.45rem;
 `
 
 const Wrapper = styled.div`
   margin: 0 auto;
-  max-width: 960;
+  max-width: 960px;
   padding: 1.45rem 1.0875rem;
 `
 

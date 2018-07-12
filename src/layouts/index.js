@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import Header from '../components/header'
 import './index.css'
-import "prismjs/themes/prism-tomorrow.css"
+import 'prismjs/themes/prism-tomorrow.css'
 
 const Layout = ({ children, data }) => (
   <div>
@@ -16,15 +16,13 @@ const Layout = ({ children, data }) => (
       ]}
     />
     <Header siteTitle={data.site.siteMetadata.title} />
-    <Container>
-      {children()}
-    </Container>
+    <Container>{children()}</Container>
   </div>
 )
 
 const Container = styled.div`
   margin: 0 auto;
-  max-width: 960;
+  max-width: 960px;
   padding: 0px 1.0875rem 1.45rem;
   padding-top: 0;
 `
