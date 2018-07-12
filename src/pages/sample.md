@@ -1,55 +1,58 @@
 ---
 title: markdown sample
-date: "2018-06-20"
-tags: ['sample', 'javascript']
+date: "2018-07-10"
+tags: ['php', 'javascript', 'ruby',]
 ---
 
-JavaScript Syntax Highlight test  
-現状font sizeが微妙かも
+JavaScript Syntax Highlight test
 
 ```javascript
 import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
+import styled from 'styled-components'
+import Pager from '../components/pager'
+import Tag from '../components/tag'
 
-import Header from '../components/header'
-import './index.css'
-import "prismjs/themes/prism-tomorrow.css"
+export default ({ data, pathContext }) => {
+  const post = data.markdownRemark
 
-const Layout = ({ children, data }) => (
-  <div>
-    <Helmet
-      title={data.site.siteMetadata.title}
-      meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
-      ]}
-    />
-    <Header siteTitle={data.site.siteMetadata.title} />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
-      {children()}
+  return (
+    <div>
+      <TitleHeader>
+        <h1>{post.frontmatter.title}</h1>
+        <span>{post.frontmatter.date}</span>
+        <div>
+          <span>Tag: </span>
+          {post.frontmatter.tags.map(tag => <StyledTag key={tag} tag={tag} />)}
+        </div>
+      </TitleHeader>
+      <PostContainer dangerouslySetInnerHTML={{ __html: post.html }} />
+      <Pager {...pathContext} />
     </div>
-  </div>
-)
-
-Layout.propTypes = {
-  children: PropTypes.func,
+  )
 }
 
-export default Layout
+const TitleHeader = styled.div`
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #000;
+`
+
+const PostContainer = styled.div`
+  margin-bottom: 20px;
+`
+
+const StyledTag = styled(Tag)`
+  margin-right: 10px;
+`
 
 export const query = graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
+  query BlogPostQuery($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
         title
+        date(formatString: "YYYY/MM/DD")
+        tags
       }
     }
   }

@@ -1,11 +1,11 @@
 import React from 'react'
-import Pager from '../components/pager'
 import styled from 'styled-components'
+import Pager from '../components/pager'
 import Tag from '../components/tag'
 
 export default ({ data, pathContext }) => {
   const post = data.markdownRemark
-  console.log(post)
+
   return (
     <div>
       <TitleHeader>
@@ -13,7 +13,7 @@ export default ({ data, pathContext }) => {
         <span>{post.frontmatter.date}</span>
         <div>
           <span>Tag: </span>
-          {post.frontmatter.tags.map(tag => <StyledLink key={tag} tag={tag} />)}
+          {post.frontmatter.tags.map(tag => <StyledTag key={tag} tag={tag} />)}
         </div>
       </TitleHeader>
       <PostContainer dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -23,7 +23,7 @@ export default ({ data, pathContext }) => {
 }
 
 const TitleHeader = styled.div`
-  padding: 10px;
+  padding-bottom: 10px;
   margin-bottom: 20px;
   border-bottom: 1px solid #000;
 `
@@ -32,7 +32,7 @@ const PostContainer = styled.div`
   margin-bottom: 20px;
 `
 
-const StyledLink = styled(Tag)`
+const StyledTag = styled(Tag)`
   margin-right: 10px;
 `
 

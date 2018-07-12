@@ -1,7 +1,7 @@
 ---
-title: markdown sample
-date: "2018-06-21"
-tags: ['sample', 'javascript']
+title: markdown sample2
+date: "2018-07-12"
+tags: ['php']
 ---
 
-# next test
+# prev test

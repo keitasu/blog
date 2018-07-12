@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from '../components/defaultLink'
-import Tag from '../components/tag'
 
 export default ({ data }) => {
   return (
