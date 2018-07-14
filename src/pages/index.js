@@ -5,14 +5,13 @@ import Link from '../components/defaultLink'
 export default ({ data }) => {
   return (
     <div>
-      <h4>{data.allMarkdownRemark.totalCount} posts</h4>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <Container key={node.id}>
-          <ExtendLink to={`/entry${node.fields.slug}`}>
+          <StyledLink to={`/entry${node.fields.slug}`}>
             <H3>{node.frontmatter.title}</H3>
             <p>{node.excerpt}</p>
             <span>{node.frontmatter.date}</span>
-          </ExtendLink>
+          </StyledLink>
         </Container>
       ))}
     </div>
@@ -29,7 +28,7 @@ const H3 = styled.h3`
   margin-bottom: 20px;
 `
 
-const ExtendLink = styled(Link)`
+const StyledLink = styled(Link)`
   display: inline-block;
   width: 100%;
   height: 100%;

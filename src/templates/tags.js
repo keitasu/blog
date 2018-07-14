@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-const Tags = ({ pathContext, data }) => {
+export default ({ pathContext, data }) => {
   const { tag } = pathContext
   const { edges, totalCount } = data.allMarkdownRemark
   const tagHeader = `${totalCount} post${
@@ -26,8 +26,6 @@ const Tags = ({ pathContext, data }) => {
     </div>
   )
 }
-
-export default Tags
 
 export const pageQuery = graphql`
   query TagPage($tag: String) {

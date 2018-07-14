@@ -12,7 +12,7 @@ export default ({ data, pathContext }) => {
         <h1>{post.frontmatter.title}</h1>
         <span>{post.frontmatter.date}</span>
         <div>
-          <span>Tag: </span>
+          <span>Tags: </span>
           {post.frontmatter.tags.map(tag => <StyledTag key={tag} tag={tag} />)}
         </div>
       </TitleHeader>

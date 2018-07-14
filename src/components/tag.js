@@ -12,6 +12,6 @@ export default ({ className, tag }) => (
 const StyledLink = styled(Link)`
   display: inline-block;
   padding: 0 0.5rem;
-  border: 1px solid #000;
+  border: 1px solid #6c787f;
   border-radius: 10px;
 `

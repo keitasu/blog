@@ -7,13 +7,17 @@ export default ({ next, prev }) => (
     {prev && (
       <div>
         <span>Prev: </span>
-        <Link to={`/entry${prev.fields.slug}`}>{prev.frontmatter.title}</Link>
+        <StyledLink to={`/entry${prev.fields.slug}`}>
+          {prev.frontmatter.title}
+        </StyledLink>
       </div>
     )}
     {next && (
       <div>
         <span>Next: </span>
-        <Link to={`/entry${next.fields.slug}`}>{next.frontmatter.title}</Link>
+        <StyledLink to={`/entry${next.fields.slug}`}>
+          {next.frontmatter.title}
+        </StyledLink>
       </div>
     )}
   </Container>
@@ -21,4 +25,7 @@ export default ({ next, prev }) => (
 
 const Container = styled.div`
   width: 100%;
+`
+const StyledLink = styled(Link)`
+  text-decoration: none;
 `
