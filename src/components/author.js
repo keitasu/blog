@@ -14,11 +14,13 @@ export default () => (
 
 const Container = styled.div`
   display: flex;
+  padding: 0.5rem 0;
 `
 
 const Icon = styled.img`
   border-radius: 50%;
   margin-right: 30px;
+  margin-bottom: 0;
 `
 
 const Profile = styled.div``

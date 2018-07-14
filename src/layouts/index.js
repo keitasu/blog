@@ -17,7 +17,7 @@ const Layout = ({ children, data }) => (
     />
     <Header siteTitle={data.site.siteMetadata.title} />
     <Wrapper>{children()}</Wrapper>
-    <StyledFooter siteTitle={data.site.siteMetadata.title} />
+    <StyledFooter />
   </Container>
 )
 
