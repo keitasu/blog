@@ -19,7 +19,7 @@ export default ({ data }) => {
 }
 
 const Container = styled.div`
-  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
   padding: 10px;
   margin-bottom: 20px;
 `

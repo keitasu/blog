@@ -10,7 +10,7 @@ export default ({ data, pathContext }) => {
     <div>
       <TitleHeader>
         <h1>{post.frontmatter.title}</h1>
-        <span>{post.frontmatter.date}</span>
+        <Date>{post.frontmatter.date}</Date>
         <div>
           <span>Tags: </span>
           {post.frontmatter.tags.map(tag => <StyledTag key={tag} tag={tag} />)}
@@ -34,6 +34,11 @@ const PostContainer = styled.div`
 
 const StyledTag = styled(Tag)`
   margin-right: 10px;
+`
+
+const Date = styled.div`
+  display: inline-block;
+  margin-bottom: 10px;
 `
 
 export const query = graphql`
