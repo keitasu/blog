@@ -5,15 +5,15 @@ import Tag from '../components/tag'
 
 export default ({ data, pathContext }) => {
   const post = data.markdownRemark
-
+  const tags = post.frontmatter.tags
   return (
     <div>
       <TitleHeader>
         <h1>{post.frontmatter.title}</h1>
         <Date>{post.frontmatter.date}</Date>
         <div>
-          <span>Tags: </span>
-          {post.frontmatter.tags.map(tag => <StyledTag key={tag} tag={tag} />)}
+          <TagName>{1 < tags.length ? 'Tags' : 'Tag'}: </TagName>
+          {tags.map(tag => <StyledTag key={tag} tag={tag} />)}
         </div>
       </TitleHeader>
       <PostContainer dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -39,6 +39,10 @@ const StyledTag = styled(Tag)`
 const Date = styled.div`
   display: inline-block;
   margin-bottom: 10px;
+`
+const TagName = styled.span`
+  display: inline-block;
+  margin-right: 10px;
 `
 
 export const query = graphql`
