@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import Author from '../components/author'
+import Author from './author'
 
 export default ({ className, siteTitle }) => (
   <Container className={className}>
     <Wrapper>
-      <Author />
+      <StyledAuthor />
       <Copyright>© 2018 suke</Copyright>
     </Wrapper>
   </Container>
@@ -22,4 +22,10 @@ const Wrapper = styled.div`
   padding: 1rem 1.5rem 0.8rem;
 `
 
-const Copyright = styled.div``
+const Copyright = styled.div`
+  text-align: center;
+`
+const StyledAuthor = styled(Author)`
+  border-bottom: 1px solid white;
+  margin-bottom: 10px;
+`

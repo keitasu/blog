@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import icon from '../img/icon.jpg'
 import TwitterIcon from './twitterIcon'
 
-export default () => (
-  <Container>
+export default ({ className }) => (
+  <Container className={className}>
     <Icon src={icon} alt="" width="70" height="70" />
     <Profile>
       <div>
