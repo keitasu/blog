@@ -1,15 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 import icon from '../img/icon.jpg'
-import TwitterIcon from '../components/twitterIcon'
+import TwitterIcon from './twitterIcon'
 
 export default () => (
   <Container>
     <Icon src={icon} alt="" width="70" height="70" />
     <Profile>
       <div>
-        Suke<br />
-        software engineer
+        suke<br />
+        Web engineer
       </div>
       <TwitterIcon />
     </Profile>
