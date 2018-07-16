@@ -5,6 +5,7 @@ import Header from '../components/header'
 import Footer from '../components/footer'
 import './index.css'
 import 'prismjs/themes/prism-tomorrow.css'
+import favicon from '../img/favicon.ico'
 
 const Layout = ({ children, data }) => (
   <Container>
@@ -14,6 +15,7 @@ const Layout = ({ children, data }) => (
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
       ]}
+      link={[{ rel: 'icon', type: 'image/ico', href: `${favicon}` }]}
     />
     <Header siteTitle={data.site.siteMetadata.title} />
     <Wrapper>{children()}</Wrapper>
