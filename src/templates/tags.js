@@ -1,31 +1,33 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import styled from 'styled-components'
 
 export default ({ pathContext, data }) => {
   const { tag } = pathContext
-  const { edges, totalCount } = data.allMarkdownRemark
-  const tagHeader = `${totalCount} post${
-    totalCount === 1 ? '' : 's'
-  } tagged widh "${tag}"`
+  const { edges } = data.allMarkdownRemark
 
   return (
     <div>
-      <h1>{tagHeader}</h1>
+      <h1>{tag}</h1>
       <ul>
         {edges.map(({ node }) => {
           const { title } = node.frontmatter
           const { slug } = node.fields
           return (
             <li key={slug}>
-              <Link to={slug}>{title}</Link>
+              <StyledLink to={`/entry${slug}`}>{title}</StyledLink>
             </li>
           )
         })}
       </ul>
-      <Link to="/tags">All tags</Link>
     </div>
   )
 }
+
+const StyledLink = styled(Link)`
+  font-size: 1.2rem;
+  text-decoration: none;
+`
 
 export const pageQuery = graphql`
   query TagPage($tag: String) {

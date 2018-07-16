@@ -80,7 +80,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       let tags = []
       _.each(posts, edge => {
         if (_.get(edge, 'node.frontmatter.tags')) {
-          tags.concat(edge.node.frontmatter.tags)
+          tags = tags.concat(edge.node.frontmatter.tags)
         }
       })
 
