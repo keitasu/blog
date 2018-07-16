@@ -24,28 +24,15 @@ export default ({ next, prev }) => (
 )
 
 const Container = styled.div`
-  position: relative;
   width: 100%;
+  padding: 15px 0;
+  border-top: 1px solid #000;
+  font-size: 1.1rem;
 `
 
 const BaseWrapper = styled.div`
   margin-bottom: 0.5rem;
 `
-
-// const BaseArraw = styled.div`
-//   width: 20px;
-//   height: 20px;
-//   border-top: 3px solid #666;
-//   border-right: 3px solid #666;
-// `
-
-// const PrevArrow = styled(BaseArraw)`
-//   transform: rotate(225deg);
-// `
-
-// const NextArrow = styled(BaseArraw)`
-//   transform: rotate(45deg);
-// `
 
 const StyledLink = styled(Link)`
   text-decoration: none;
