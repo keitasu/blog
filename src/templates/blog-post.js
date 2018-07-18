@@ -2,12 +2,30 @@ import React from 'react'
 import styled from 'styled-components'
 import Pager from '../components/pager'
 import Tag from '../components/tag'
+import Helmet from 'react-helmet'
+import icon from '../img/icon.jpg'
 
 export default ({ data, pathContext }) => {
   const post = data.markdownRemark
   const tags = post.frontmatter.tags
+  const description = post.frontmatter.description
+  const { slug } = pathContext
+  const postUrl = `https://suke.io/entry/${slug}`
+
   return (
     <div>
+      <Helmet
+        meta={[
+          { name: 'description', content: description },
+          { property: 'og:title', content: post.frontmatter.title },
+          { property: 'og:type', content: 'blog' },
+          { property: 'og:url', content: postUrl },
+          { property: 'og:image', content: icon },
+          { property: 'og:description', content: description },
+          { name: 'twitter:card', content: 'summary' },
+          { name: 'twitter:site', content: '@suke' },
+        ]}
+      />
       <TitleHeader>
         <h1>{post.frontmatter.title}</h1>
         <Date>{post.frontmatter.date}</Date>
@@ -24,7 +42,7 @@ export default ({ data, pathContext }) => {
 
 const TitleHeader = styled.div`
   padding-bottom: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   border-bottom: 1px solid #000;
 `
 
@@ -53,6 +71,7 @@ export const query = graphql`
         title
         date(formatString: "YYYY/MM/DD")
         tags
+        description
       }
     }
   }

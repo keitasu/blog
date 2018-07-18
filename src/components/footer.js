@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Author from './author'
 
-export default ({ className, siteTitle }) => (
+export default ({ className }) => (
   <Container className={className}>
     <Wrapper>
       <StyledAuthor />
@@ -12,8 +12,8 @@ export default ({ className, siteTitle }) => (
 )
 
 const Container = styled.div`
-  background: #2ac1f4;
   color: white;
+  background: #2ac1f4;
 `
 
 const Wrapper = styled.div`

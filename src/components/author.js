@@ -5,14 +5,14 @@ import TwitterIcon from './twitterIcon'
 
 export default ({ className }) => (
   <Container className={className}>
-    <Icon src={icon} alt="" width="70" height="70" />
-    <Profile>
+    <Icon src={icon} alt="suke icon" width="70" height="70" />
+    <div>
       <div>
         suke<br />
         Web engineer
       </div>
       <TwitterIcon />
-    </Profile>
+    </div>
   </Container>
 )
 
@@ -26,5 +26,3 @@ const Icon = styled.img`
   margin-right: 30px;
   margin-bottom: 0;
 `
-
-const Profile = styled.div``

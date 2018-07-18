@@ -3,8 +3,8 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import Header from '../components/header'
 import Footer from '../components/footer'
-import './index.css'
 import 'prismjs/themes/prism-tomorrow.css'
+import './index.css'
 import favicon from '../img/favicon.ico'
 
 const Layout = ({ children, data }) => (
@@ -17,9 +17,9 @@ const Layout = ({ children, data }) => (
       ]}
       link={[{ rel: 'icon', type: 'image/ico', href: `${favicon}` }]}
     />
-    <Header siteTitle={data.site.siteMetadata.title} />
+    <StyledHeader siteTitle={data.site.siteMetadata.title} />
     <Wrapper>{children()}</Wrapper>
-    <StyledFooter />
+    <Footer />
   </Container>
 )
 
@@ -33,7 +33,9 @@ const Wrapper = styled.div`
   padding-top: 0;
 `
 
-const StyledFooter = styled(Footer)``
+const StyledHeader = styled(Header)`
+  margin-bottom: 40px;
+`
 
 export default Layout
 

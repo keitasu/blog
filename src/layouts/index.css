@@ -39,6 +39,7 @@ template {
 }
 a {
   background-color: transparent;
+  text-decoration: none;
   -webkit-text-decoration-skip: objects;
 }
 a:active,
@@ -620,6 +621,7 @@ pre tt:after {
 
 code[class*="language-"],
 pre[class*="language-"] {
+  margin: 1.5rem 0;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;

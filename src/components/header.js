@@ -2,8 +2,8 @@ import React from 'react'
 import gatsbyLink from 'gatsby-link'
 import styled from 'styled-components'
 
-const Header = ({ siteTitle }) => (
-  <Container>
+export default ({ className, siteTitle }) => (
+  <Container className={className}>
     <Wrapper>
       <H1>
         <Link to="/">{siteTitle}</Link>
@@ -31,5 +31,3 @@ const Link = styled(gatsbyLink)`
 const H1 = styled.h1`
   margin: 0;
 `
-
-export default Header

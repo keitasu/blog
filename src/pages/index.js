@@ -26,7 +26,6 @@ const Container = styled.div`
   transition: 0.3s;
   &:hover {
     box-shadow: 0 3px 15px 4px rgba(0, 0, 0, 0.15);
-    transform: scale(1.005);
   }
 `
 
