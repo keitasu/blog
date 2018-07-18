@@ -13,9 +13,12 @@ const Layout = ({ children, data }) => (
       title={data.site.siteMetadata.title}
       meta={[
         { name: 'description', content: 'このブログはsukeの技術ブログです。' },
-        { name: 'keywords', content: 'suke, ,suke blog, techblog' },
+        { name: 'keywords', content: 'suke, ,blog' },
       ]}
-      link={[{ rel: 'icon', type: 'image/ico', href: `${favicon}` }]}
+      link={[
+        { rel: 'icon', type: 'image/ico', href: `${favicon}` },
+        { rel: 'canonical', href: 'https://suke.io' },
+      ]}
     />
     <StyledHeader siteTitle={data.site.siteMetadata.title} />
     <Wrapper>{children()}</Wrapper>
