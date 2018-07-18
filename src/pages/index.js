@@ -19,9 +19,15 @@ export default ({ data }) => {
 }
 
 const Container = styled.div`
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
   padding: 10px;
   margin-bottom: 20px;
+  border: 1px solid #eee;
+  transition: 0.3s;
+  &:hover {
+    box-shadow: 0 3px 15px 4px rgba(0, 0, 0, 0.15);
+    transform: scale(1.005);
+  }
 `
 
 const H3 = styled.h3`

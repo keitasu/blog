@@ -31,6 +31,8 @@ export default () => (
 
 const Container = styled.a`
   display: block;
+  width: 25px;
+  height: 25px;
 `
 
 const Img = styled.img`
