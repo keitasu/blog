@@ -23,7 +23,8 @@ export default ({ data, pathContext }) => {
           { property: 'og:image', content: icon },
           { property: 'og:description', content: description },
           { name: 'twitter:card', content: 'summary' },
-          { name: 'twitter:site', content: '@suke' },
+          { name: 'twitter:site', content: '@suke083' },
+          { name: 'twitter:player', content: '@suke083' },
         ]}
       />
       <TitleHeader>
