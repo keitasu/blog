@@ -11,13 +11,15 @@ export default ({ data, pathContext }) => {
   const description = post.frontmatter.description
   const { slug } = pathContext
   const postUrl = `https://suke.io/entry${slug}`
+  const title = `${post.frontmatter.title} | ${data.site.siteMetadata.title}`
   return (
     <div>
       <Helmet
+        title={title}
         meta={[
           { name: 'description', content: description },
           { rel: 'canonical', href: 'https://suke.io' },
-          { property: 'og:title', content: post.frontmatter.title },
+          { property: 'og:title', content: data.site.siteMetadata.title },
           { property: 'og:type', content: 'blog' },
           { property: 'og:url', content: postUrl },
           { property: 'og:image', content: icon },
@@ -66,6 +68,11 @@ const TagName = styled.span`
 
 export const query = graphql`
   query BlogPostQuery($slug: String!) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {

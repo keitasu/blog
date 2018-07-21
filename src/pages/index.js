@@ -16,7 +16,6 @@ export default ({ data }) => {
             name: 'description',
             content: 'このブログはsukeの技術ブログです。',
           },
-          { name: 'keywords', content: 'suke, ,blog' },
           { property: 'og:title', content: title },
           { property: 'og:type', content: 'blog' },
           { property: 'og:url', content: 'https://suke.io' },
