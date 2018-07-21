@@ -13,7 +13,7 @@ export default ({ className, siteTitle }) => (
 )
 
 const Container = styled.div`
-  background: #2ac1f4;
+  background: #0b5575;
   margin-bottom: 1.45rem;
 `
 

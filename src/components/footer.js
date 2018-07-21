@@ -13,7 +13,7 @@ export default ({ className }) => (
 
 const Container = styled.div`
   color: white;
-  background: #2ac1f4;
+  background: #0b5575;
 `
 
 const Wrapper = styled.div`
