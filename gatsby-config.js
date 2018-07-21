@@ -7,7 +7,6 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     'gatsby-transformer-remark',
-    `gatsby-plugin-offline`,
     {
       resolve: 'gatsby-source-filesystem',
       options: {
