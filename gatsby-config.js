@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'suke blog',
+    siteUrl: `https://suke.io`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -27,6 +28,9 @@ module.exports = {
           },
         ],
       },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
     },
   ],
 }
