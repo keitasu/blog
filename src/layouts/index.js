@@ -1,25 +1,12 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import Header from '../components/header'
 import Footer from '../components/footer'
 import 'prismjs/themes/prism-tomorrow.css'
 import './index.css'
-import favicon from '../img/favicon.ico'
 
 const Layout = ({ children, data }) => (
   <Container>
-    <Helmet
-      title={data.site.siteMetadata.title}
-      meta={[
-        { name: 'description', content: 'このブログはsukeの技術ブログです。' },
-        { name: 'keywords', content: 'suke, ,blog' },
-      ]}
-      link={[
-        { rel: 'icon', type: 'image/ico', href: `${favicon}` },
-        { rel: 'canonical', href: 'https://suke.io' },
-      ]}
-    />
     <StyledHeader siteTitle={data.site.siteMetadata.title} />
     <Wrapper>{children()}</Wrapper>
     <Footer />

@@ -4,22 +4,23 @@ import Pager from '../components/pager'
 import Tag from '../components/tag'
 import Helmet from 'react-helmet'
 import icon from '../img/icon.jpg'
+
 export default ({ data, pathContext }) => {
   const post = data.markdownRemark
   const tags = post.frontmatter.tags
   const description = post.frontmatter.description
   const { slug } = pathContext
   const postUrl = `https://suke.io/entry${slug}`
-  const iconUrl = `https://suke.io${icon}`
   return (
     <div>
       <Helmet
         meta={[
           { name: 'description', content: description },
+          { rel: 'canonical', href: 'https://suke.io' },
           { property: 'og:title', content: post.frontmatter.title },
           { property: 'og:type', content: 'blog' },
           { property: 'og:url', content: postUrl },
-          { property: 'og:image', content: iconUrl },
+          { property: 'og:image', content: icon },
           { property: 'og:description', content: description },
           { name: 'twitter:card', content: 'summary' },
           { name: 'twitter:site', content: '@suke083' },

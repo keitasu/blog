@@ -1,10 +1,36 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import Link from '../components/defaultLink'
+import favicon from '../img/favicon.ico'
+import icon from '../img/icon.jpg'
 
 export default ({ data }) => {
+  const title = data.site.siteMetadata.title
   return (
     <div>
+      <Helmet
+        title={title}
+        meta={[
+          {
+            name: 'description',
+            content: 'このブログはsukeの技術ブログです。',
+          },
+          { name: 'keywords', content: 'suke, ,blog' },
+          { property: 'og:title', content: title },
+          { property: 'og:type', content: 'blog' },
+          { property: 'og:url', content: 'https://suke.io' },
+          { property: 'og:image', content: icon },
+          { property: 'og:description', content: 'suke blog' },
+          { name: 'twitter:card', content: 'summary' },
+          { name: 'twitter:site', content: '@suke083' },
+          { name: 'twitter:player', content: '@suke083' },
+        ]}
+        link={[
+          { rel: 'icon', type: 'image/ico', href: `${favicon}` },
+          { rel: 'canonical', href: 'https://suke.io' },
+        ]}
+      />
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <Container key={node.id}>
           <StyledLink to={`/entry${node.fields.slug}`}>
@@ -41,6 +67,11 @@ const StyledLink = styled(Link)`
 
 export const query = graphql`
   query IndexQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       totalCount
       edges {
