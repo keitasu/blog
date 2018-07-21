@@ -11,7 +11,7 @@ export default ({ className }) => (
   </Container>
 )
 
-const Container = styled.div`
+const Container = styled.footer`
   color: white;
   background: #0b5575;
 `

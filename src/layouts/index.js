@@ -30,7 +30,7 @@ const Layout = ({ children, data }) => (
 
 const Container = styled.div``
 
-const Wrapper = styled.div`
+const Wrapper = styled.main`
   margin: 0 auto;
   max-width: 960px;
   min-height: 90vh;

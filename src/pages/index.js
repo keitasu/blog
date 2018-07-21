@@ -43,7 +43,7 @@ export default ({ data }) => {
   )
 }
 
-const Container = styled.div`
+const Container = styled.article`
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
   padding: 10px;
   margin-bottom: 20px;

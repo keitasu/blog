@@ -13,7 +13,7 @@ export default ({ data, pathContext }) => {
   const postUrl = `https://suke.io/entry${slug}`
   const title = `${post.frontmatter.title} | ${data.site.siteMetadata.title}`
   return (
-    <div>
+    <article>
       <Helmet
         title={title}
         meta={[
@@ -39,7 +39,7 @@ export default ({ data, pathContext }) => {
       </TitleHeader>
       <PostContainer dangerouslySetInnerHTML={{ __html: post.html }} />
       <Pager {...pathContext} />
-    </div>
+    </article>
   )
 }
 
