@@ -11,6 +11,7 @@ export default ({ data, pathContext }) => {
   const description = post.frontmatter.description
   const { slug } = pathContext
   const postUrl = `https://suke.io/entry${slug}`
+  const iconUrl = `https://suke.io/${icon}`
   const title = `${post.frontmatter.title} | ${data.site.siteMetadata.title}`
   return (
     <article>
@@ -22,7 +23,7 @@ export default ({ data, pathContext }) => {
           { property: 'og:title', content: data.site.siteMetadata.title },
           { property: 'og:type', content: 'blog' },
           { property: 'og:url', content: postUrl },
-          { property: 'og:image', content: icon },
+          { property: 'og:image', content: iconUrl },
           { property: 'og:description', content: description },
           { name: 'twitter:card', content: 'summary' },
           { name: 'twitter:site', content: '@suke083' },
