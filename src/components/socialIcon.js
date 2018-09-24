@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-const twitterLabel = 'twitter icon'
-const githubLabel = 'github icon'
 import twitterIcon from '../img/twitter.png'
 import githubIcon from '../img/GitHub-Mark-Light-64px.png'
+const githubLabel = 'github icon'
+const twitterLabel = 'twitter icon'
+
 export default ({ className }) => (
   <Container className={className}>
     <Link href="https://twitter.com/suke083" target="_brank">

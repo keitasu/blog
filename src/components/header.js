@@ -1,5 +1,5 @@
 import React from 'react'
-import gatsbyLink from 'gatsby-link'
+import { Link as gatsbyLink } from 'gatsby'
 import styled from 'styled-components'
 
 export default ({ className, siteTitle }) => (

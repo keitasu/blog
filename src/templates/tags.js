@@ -1,29 +1,31 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
+import Layout from '../components/layout'
+import { graphql } from 'gatsby'
 
-export default ({ pathContext, data }) => {
-  const { tag } = pathContext
+export default ({ data, pageContext }) => {
+  const { tag } = pageContext
   const { edges } = data.allMarkdownRemark
-
   return (
-    <div>
-      <h1>{tag}</h1>
-      <ul>
-        {edges.map(({ node }) => {
-          const { title } = node.frontmatter
-          const { slug } = node.fields
-          return (
-            <li key={slug}>
-              <StyledLink to={`/entry${slug}`}>{title}</StyledLink>
-            </li>
-          )
-        })}
-      </ul>
-    </div>
+    <Layout>
+      <div>
+        <h1>{tag}</h1>
+        <ul>
+          {edges.map(({ node }) => {
+            const { title } = node.frontmatter
+            const { slug } = node.fields
+            return (
+              <li key={slug}>
+                <StyledLink to={`/entry${slug}`}>{title}</StyledLink>
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+    </Layout>
   )
 }
-
 const StyledLink = styled(Link)`
   font-size: 1.2rem;
   text-decoration: none;
