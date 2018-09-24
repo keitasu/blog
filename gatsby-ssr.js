@@ -8,7 +8,7 @@
 
 import Helmet from 'react-helmet'
 
-exports.onRenderBody = (
+const onRenderBody = (
   { setHeadComponents, setHtmlAttributes, setBodyAttributes },
   pluginOptions
 ) => {
@@ -24,3 +24,5 @@ exports.onRenderBody = (
     helmet.style.toComponent(),
   ])
 }
+
+export default onRenderBody
