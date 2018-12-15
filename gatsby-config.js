@@ -6,6 +6,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-page-transitions',
     'gatsby-transformer-remark',
     {
       resolve: 'gatsby-source-filesystem',
