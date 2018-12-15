@@ -7,6 +7,7 @@ import 'prismjs/themes/prism-tomorrow.css'
 import '../layouts/index.css'
 import favicon from '../img/favicon.ico'
 import { StaticQuery, graphql } from 'gatsby'
+import PageTransition from 'gatsby-plugin-page-transitions'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -35,7 +36,9 @@ const Layout = ({ children }) => (
           ]}
         />
         <StyledHeader siteTitle={data.site.siteMetadata.title} />
-        <Wrapper>{children}</Wrapper>
+        <PageTransition>
+          <Wrapper>{children}</Wrapper>
+        </PageTransition>
         <Footer />
       </Container>
     )}
