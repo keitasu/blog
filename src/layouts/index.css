@@ -633,3 +633,7 @@ pre[class*="language-"] {
     font-size: 100%;
   }
 }
+
+.language-text {
+  padding: .2em !important;
+}
