@@ -6,7 +6,7 @@ export default ({ className }) => (
   <Container className={className}>
     <Wrapper>
       <StyledAuthor />
-      <Copyright>© 2018 suke</Copyright>
+      <Copyright>© 2019 suke</Copyright>
     </Wrapper>
   </Container>
 )
