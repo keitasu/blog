@@ -61,6 +61,8 @@ const TitleHeader = styled.div`
 
 const PostContainer = styled.div`
   margin-bottom: 20px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
 `
 
 const StyledTag = styled(Tag)`
