@@ -908,10 +908,10 @@
     "@babel/plugin-transform-react-jsx-self" "^7.0.0"
     "@babel/plugin-transform-react-jsx-source" "^7.0.0"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.5":
-  version "7.5.5"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.5.5.tgz#74fba56d35efbeca444091c7850ccd494fd2f132"
-  integrity sha512-28QvEGyQyNkB0/m2B4FU7IEZGK2NUrcMtT6BZEFALTguLk+AUT6ofsHtPk5QyjAdUkpMJ+/Em+quwz4HOt30AQ==
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3":
+  version "7.6.3"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.6.3.tgz#935122c74c73d2240cafd32ddb5fc2a6cd35cf1f"
+  integrity sha512-kq6anf9JGjW8Nt5rYfEuGRaEAaH1mkv3Bbu6rYvLOpPh/RusSJXuKPEAoZ7L7gybZkchE8+NV5g9vKF4AGAtsA==
   dependencies:
     regenerator-runtime "^0.13.2"
 
@@ -4644,12 +4644,12 @@ gatsby-plugin-react-helmet@^3.1.6:
   dependencies:
     "@babel/runtime" "^7.5.5"
 
-gatsby-plugin-sitemap@^2.2.10:
-  version "2.2.10"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sitemap/-/gatsby-plugin-sitemap-2.2.10.tgz#cf399f5e3f42e50ce36b54e0994ec916fd7f5237"
-  integrity sha512-2ND6gEv8P8fBfNKdkv2T51ria6tkCTCBGjrG8zOl60a+OhIJJQANZijIFKaFz/1j+nv+C7h5uxHmvJKf03C0/Q==
+gatsby-plugin-sitemap@^2.2.17:
+  version "2.2.17"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sitemap/-/gatsby-plugin-sitemap-2.2.17.tgz#d601bf6f56eb09412a3af39c148d58019e3de685"
+  integrity sha512-vL4LHX+ieisv5vilU5qBIQcV9bNLTQy5Inwq9puUnZyjSpDYozkwYwDOPraJoWhbIyxdiBnBVWVcuLOPPL3ctg==
   dependencies:
-    "@babel/runtime" "^7.5.5"
+    "@babel/runtime" "^7.6.3"
     minimatch "^3.0.4"
     pify "^3.0.0"
     sitemap "^1.13.0"
