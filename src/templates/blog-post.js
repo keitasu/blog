@@ -63,6 +63,19 @@ const PostContainer = styled.div`
   margin-bottom: 20px;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
+  @media (prefers-color-scheme: dark) {
+    a {
+      color: var(--textLink);
+      transition: all 0.2s;
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -ms-transition: all 0.2s;
+      -o-transition: all 0.2s;
+    }
+    a:hover {
+      color: var(--textLink-hover);
+    }
+  }
 `
 
 const StyledTag = styled(Tag)`

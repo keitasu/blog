@@ -13,7 +13,7 @@ export default ({ className }) => (
 
 const Container = styled.footer`
   color: white;
-  background: #0b5575;
+  background: var(--theme-ui-colors-b);
 `
 
 const Wrapper = styled.div`

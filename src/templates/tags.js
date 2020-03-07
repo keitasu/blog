@@ -27,8 +27,17 @@ export default ({ data, pageContext }) => {
   )
 }
 const StyledLink = styled(Link)`
+  color: var(--textLink);
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
   font-size: 1.2rem;
   text-decoration: none;
+  &:hover {
+    color: var(--textLink-hover);
+  }
 `
 
 export const pageQuery = graphql`
