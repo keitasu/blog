@@ -638,6 +638,7 @@ body {
   --textNormal: hsla(0, 0%, 0%, 0.8);
   --textTitle: white;
   --textLink: blue;
+  --textLink-hover: blue;
   --hr: hsla(0, 0%, 0%, 0.2);
   --theme-ui-colors-b: #0b5575;
   --box-shadow: rgba(0, 0, 0, 0.2);
