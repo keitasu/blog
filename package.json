@@ -13,7 +13,7 @@
     "gatsby-plugin-sitemap": "^2.2.27",
     "gatsby-plugin-styled-components": "^3.1.4",
     "gatsby-remark-prismjs": "^3.3.31",
-    "gatsby-source-filesystem": "^2.1.33",
+    "gatsby-source-filesystem": "^2.1.50",
     "gatsby-transformer-remark": "^2.6.55",
     "prismjs": "^1.17.1",
     "react": "^16.13.0",
