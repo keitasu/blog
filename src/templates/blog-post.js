@@ -75,6 +75,10 @@ const PostContainer = styled.div`
     a:hover {
       color: var(--textLink-hover);
     }
+    td,
+    th {
+      border-bottom: 1px solid #666;
+    }
   }
 `
 
