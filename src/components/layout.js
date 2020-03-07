@@ -35,7 +35,7 @@ const Layout = ({ children }) => (
           ]}
         />
         <StyledHeader siteTitle={data.site.siteMetadata.title} />
-          <Wrapper>{children}</Wrapper>
+        <Wrapper>{children}</Wrapper>
         <Footer />
       </Container>
     )}
@@ -45,6 +45,7 @@ const Layout = ({ children }) => (
 const Container = styled.div``
 
 const Wrapper = styled.main`
+  color: var(--textNormal);
   margin: 0 auto;
   max-width: 960px;
   min-height: 90vh;

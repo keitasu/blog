@@ -78,13 +78,23 @@ export default () => (
 )
 
 const Container = styled.article`
-  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
-  padding: 10px;
+  box-shadow: 0 3px 5px 0 var(--box-shadow);
+  padding: 16px;
   margin-bottom: 20px;
-  border: 1px solid #eee;
+  border-radius: 5px;
   transition: 0.3s;
   &:hover {
-    box-shadow: 0 3px 15px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 3px 15px 4px var(--box-shadow-hover);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    box-shadow: none;
+    &:hover {
+      background-color: #151836;
+      box-shadow: none;
+    }
+    background-color: var(--bg);
+    border: 1px solid #eee;
   }
 `
 

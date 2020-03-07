@@ -13,7 +13,7 @@ export default ({ className, siteTitle }) => (
 )
 
 const Container = styled.header`
-  background: #0b5575;
+  background: var(--theme-ui-colors-b);
   margin-bottom: 1.45rem;
 `
 
@@ -30,4 +30,5 @@ const Link = styled(gatsbyLink)`
 
 const H1 = styled.h1`
   margin: 0;
+  color: var(--textTitle);
 `
