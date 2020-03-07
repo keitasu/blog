@@ -4,6 +4,7 @@ module.exports = {
     siteUrl: `https://suke.io`,
   },
   plugins: [
+    'gatsby-plugin-dark-mode',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     'gatsby-transformer-remark',
