@@ -645,7 +645,7 @@ body {
   --box-shadow-hover: rgba(0, 0, 0, 0.15);
 
   background-color: var(--bg);
-  /* color: hsla(0, 0%, 0%, 0.8); */
+  color: var(--text-normal);
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
@@ -659,8 +659,8 @@ body {
 body.dark {
   -webkit-font-smoothing: antialiased;
   --bg: #020411;
-  --text-normal: white;
-  --text-title: white;
+  --text-normal: rgba(255, 255, 255, 0.87);
+  --text-title: rgba(255, 255, 255, 0.87);
   --text-link: rgb(157, 184, 242);
   --text-link-hover: rgb(111, 152, 255);
   --ui-colors-b: #06113f;

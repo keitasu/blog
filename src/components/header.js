@@ -26,6 +26,9 @@ const Wrapper = styled.div`
 const Link = styled(gatsbyLink)`
   color: white;
   text-decoration: none;
+  @media (prefers-color-scheme: dark) {
+    color: var(--text-title);
+  }
 `
 
 const H1 = styled.h1`
