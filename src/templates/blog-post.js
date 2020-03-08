@@ -65,7 +65,7 @@ const PostContainer = styled.div`
   -webkit-overflow-scrolling: touch;
   @media (prefers-color-scheme: dark) {
     a {
-      color: var(--textLink);
+      color: var(--text-link);
       transition: all 0.2s;
       -webkit-transition: all 0.2s;
       -moz-transition: all 0.2s;
@@ -73,7 +73,7 @@ const PostContainer = styled.div`
       -o-transition: all 0.2s;
     }
     a:hover {
-      color: var(--textLink-hover);
+      color: var(--text-link-hover);
     }
     td,
     th {

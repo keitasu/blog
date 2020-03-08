@@ -37,14 +37,14 @@ const BaseWrapper = styled.div`
 const StyledLink = styled(Link)`
   text-decoration: none;
   @media (prefers-color-scheme: dark) {
-    color: var(--textLink);
+    color: var(--text-link);
     transition: all 0.2s;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     -ms-transition: all 0.2s;
     -o-transition: all 0.2s;
     &:hover {
-      color: var(--textLink-hover);
+      color: var(--text-link-hover);
     }
   }
 `

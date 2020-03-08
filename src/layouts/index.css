@@ -635,12 +635,12 @@ iframe {
 
 body {
   --bg: white;
-  --textNormal: hsla(0, 0%, 0%, 0.8);
-  --textTitle: white;
-  --textLink: blue;
-  --textLink-hover: blue;
+  --text-normal: hsla(0, 0%, 0%, 0.8);
+  --text-title: white;
+  --text-link: blue;
+  --text-link-hover: blue;
   --hr: hsla(0, 0%, 0%, 0.2);
-  --theme-ui-colors-b: #0b5575;
+  --ui-colors-b: #0b5575;
   --box-shadow: rgba(0, 0, 0, 0.2);
   --box-shadow-hover: rgba(0, 0, 0, 0.15);
 
@@ -659,12 +659,10 @@ body {
 body.dark {
   -webkit-font-smoothing: antialiased;
   --bg: #020411;
-  --textNormal: white;
-  --textTitle: white;
-  --textLink: rgb(157, 184, 242);
-  --textLink-hover: rgb(111, 152, 255);
-  --theme-ui-colors-b: #06113f;
+  --text-normal: white;
+  --text-title: white;
+  --text-link: rgb(157, 184, 242);
+  --text-link-hover: rgb(111, 152, 255);
+  --ui-colors-b: #06113f;
   --hr: hsla(0, 0%, 100%, 0.2);
-  --box-shadow: rgba(255, 255, 255, 0.2);
-  --box-shadow: rgba(255, 255, 255, 0.15);
 }

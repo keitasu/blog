@@ -27,7 +27,7 @@ export default ({ data, pageContext }) => {
   )
 }
 const StyledLink = styled(Link)`
-  color: var(--textLink);
+  color: var(--text-link);
   transition: all 0.2s;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
@@ -36,7 +36,7 @@ const StyledLink = styled(Link)`
   font-size: 1.2rem;
   text-decoration: none;
   &:hover {
-    color: var(--textLink-hover);
+    color: var(--text-link-hover);
   }
 `
 

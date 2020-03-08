@@ -45,7 +45,7 @@ const Layout = ({ children }) => (
 const Container = styled.div``
 
 const Wrapper = styled.main`
-  color: var(--textNormal);
+  color: var(--text-normal);
   margin: 0 auto;
   max-width: 960px;
   min-height: 90vh;
