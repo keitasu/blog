@@ -83,6 +83,7 @@ const Container = styled.article`
   margin-bottom: 20px;
   border-radius: 5px;
   transition: 0.3s;
+  background-color: var(--bgーarticle);
   &:hover {
     box-shadow: 0 3px 15px 4px var(--box-shadow-hover);
   }
@@ -90,11 +91,9 @@ const Container = styled.article`
   @media (prefers-color-scheme: dark) {
     box-shadow: none;
     &:hover {
-      background-color: #151836;
+      background-color: #252539;
       box-shadow: none;
     }
-    background-color: var(--bg);
-    border: 1px solid #eee;
   }
 `
 
