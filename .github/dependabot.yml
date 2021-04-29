@@ -1,0 +1,42 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: gatsby
+    versions:
+    - 2.31.1
+    - 2.32.11
+    - 2.32.3
+    - 2.32.4
+    - 2.32.8
+    - 2.32.9
+  - dependency-name: gatsby-source-filesystem
+    versions:
+    - 2.10.0
+    - 2.11.0
+  - dependency-name: gatsby-transformer-remark
+    versions:
+    - 2.15.0
+    - 2.16.0
+  - dependency-name: gatsby-plugin-google-analytics
+    versions:
+    - 2.10.0
+  - dependency-name: gatsby-plugin-react-helmet
+    versions:
+    - 3.9.0
+  - dependency-name: gatsby-plugin-styled-components
+    versions:
+    - 3.9.0
+  - dependency-name: gatsby-plugin-sitemap
+    versions:
+    - 2.11.0
+  - dependency-name: gatsby-link
+    versions:
+    - 2.10.0
+  - dependency-name: gatsby-remark-prismjs
+    versions:
+    - 3.12.0
